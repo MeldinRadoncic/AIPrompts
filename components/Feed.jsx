@@ -28,7 +28,7 @@ const Feed = () => {
   const [searchedResults, setSearchedResults] = useState([]);
 
   const fetchPosts = async () => {
-    const response = await fetch("/api/prompt");
+    const response = await fetch("https://ai-prompts-rho.vercel.app/api/prompt");
     const data = await response.json();
 
     setAllPosts(data);
