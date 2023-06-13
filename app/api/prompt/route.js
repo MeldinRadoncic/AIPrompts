@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import { connectToDatabase } from "@utils/database";
 import Prompt from "@models/Prompt";
 
-export const GET = async (req, res) => {
+export const GET = async (req) => {
     try {
         await connectToDatabase();
         const prompts = await Prompt.find({}).populate("creator")
