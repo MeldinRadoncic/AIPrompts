@@ -24,7 +24,7 @@ function CreatePrompt() {
         setSubmitting(true)
         try {
             // Pass the data to the API
-            const response = await fetch("http://localhost:3000/api/prompt/new", {
+            const response = await fetch("/api/prompt/new", {
                 method:"POST",
                 body: JSON.stringify({
                     prompt: post.prompt,

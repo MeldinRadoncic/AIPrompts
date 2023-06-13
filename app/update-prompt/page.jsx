@@ -42,7 +42,7 @@ function UpdatePrompt() {
 
         try {
             // Pass the data to the API
-            const response = await fetch(`http://localhost:3000/api/prompt/${promptId}`, {
+            const response = await fetch(`/api/prompt/${promptId}`, {
                 method:"PUT",
                 body: JSON.stringify({
                     prompt: post.prompt,
