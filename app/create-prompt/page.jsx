@@ -14,9 +14,7 @@ function CreatePrompt() {
     const router = useRouter()
     const { data: session } = useSession()
 
-    useEffect(() => {
-        if(!session?.user.id) return router.push("/")
-    }, [])
+  
 
     // Create Prompt
     const createPrompt = async (e) => {
