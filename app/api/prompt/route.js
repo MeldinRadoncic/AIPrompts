@@ -1,4 +1,3 @@
-import mongoose from "mongoose";
 
 import { connectToDatabase } from "@utils/database";
 import Prompt from "@models/Prompt";
