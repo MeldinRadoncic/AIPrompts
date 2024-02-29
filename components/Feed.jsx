@@ -31,7 +31,7 @@ const Feed = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch(`/api/prompt?timestamp=${Date.now()}`);
+      const response = await fetch("/api/prompt",{{cache: "no-cache"});
       const data = await response.json();
   
       setAllPosts(data);
@@ -40,7 +40,7 @@ const Feed = () => {
     fetchPosts();
   }, []);
 
-  // console.log("This is all posts ",allPosts)
+  
 
   const filterPrompts = (searchtext) => {
     const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
