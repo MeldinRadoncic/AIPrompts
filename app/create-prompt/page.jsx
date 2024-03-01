@@ -24,7 +24,6 @@ function CreatePrompt() {
             // Pass the data to the API
             const response = await fetch("/api/prompt/new", {
                 method:"POST",
-                cache: "no-cache",
                 body: JSON.stringify({
                     prompt: post.prompt,
                     userId: session?.user.id,
