@@ -32,7 +32,8 @@ function CreatePrompt() {
             })
 
             if(response.ok) {
-                router.push("/")
+                // If successful, redirect to the user's profile
+                router.push("/profile")
             }
         } catch (e) {
             console.error({message: e.message})
