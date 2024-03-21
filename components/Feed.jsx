@@ -33,7 +33,10 @@ const Feed = () => {
     const fetchPosts = async () => {
       const response = await fetch("/api/prompt",{
         method: "GET",
-        cache: "no-cache"
+        headers: {
+          "Content-Type": "application/json",
+          "cache-control": "must-revalidate",  
+        },
       })
       const data = await response.json();
   
