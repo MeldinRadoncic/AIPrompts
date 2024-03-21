@@ -38,9 +38,20 @@ const Feed = () => {
           "cache-control": "must-revalidate",  
         },
       })
-      const data = await response.json();
+      if(!response.ok){
+        throw new Error("Something went wrong");
+      }
+
+      const data = await response.json().then((data) => {
+        if (data.error) {
+          console.log(data.error);
+        } else {
+          setAllPosts(data);
+        }
+      });
+      
   
-       setAllPosts(data);
+       
     }
 
     
