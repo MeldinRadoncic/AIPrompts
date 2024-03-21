@@ -31,13 +31,8 @@ const Feed = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch("/api/prompt",{
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "cache-control": "must-revalidate",  
-        },
-      })
+      const response = await fetch("/api/prompt");
+
       if(!response.ok){
         throw new Error("Something went wrong");
       }
